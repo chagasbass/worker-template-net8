@@ -1,4 +1,4 @@
-# Restoque-Template-Worker 
+# Template-Worker 
 Template para projetos do tipo Worker Service usando as premissas de arquitetura em camadas.Este template foi feito para facilitar o desenvolvimento das novas integrações, dando mais velocidade nas entregas, pois abstrai os conceitos básicos da construção da arquitura proposta, deixando o tempo livre para resolução do negócio da melhor forma.
 
 # IMPORTANTE
