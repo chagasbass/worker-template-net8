@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Thiago Chagas",
+  "description": "Aplicação do tipo worker service já configurada com extensões de arquitetura usando o net core 8",
+  "classifications": [
+    "ASP.NET Core",
+    "Worker"
+  ],
+  "identity": "TemplateWorker.Chagas",
+  "groupIdentity": "TemplateWorker.Chagas.Customs",
+  "name": "Worker Template",
+  "shortName": "custom-worker",
+  "sourceName": "TemplateWorker",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "tests": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "domain": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "applicationservices": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "infradata": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "shared": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "extensions": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!tests)",
+          "exclude": [
+            "TemplateWorker.Test/**/*"
+          ]
+        },
+        {
+          "condition": "(!domain)",
+          "exclude": [
+            "TemplateWorker.Domain/**/*"
+          ]
+        },
+        {
+          "condition": "(!applicationservices)",
+          "exclude": [
+            "TemplateWorker.ApplicationServices/**/*"
+          ]
+        },
+        {
+          "condition": "(!infradata)",
+          "exclude": [
+            "TemplateWorker.Infra.Data/**/*"
+          ]
+        },
+        {
+          "condition": "(!shared)",
+          "exclude": [
+            "TemplateWorker.Shared/**/*"
+          ]
+        },
+        {
+          "condition": "(!extensions)",
+          "exclude": [
+            "TemplateWorker.Extensions/**/*"
+          ]
+        }
+      ]
+    }
+  ]
+}

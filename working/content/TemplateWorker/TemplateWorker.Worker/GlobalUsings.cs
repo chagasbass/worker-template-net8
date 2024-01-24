@@ -1,0 +1,16 @@
+﻿global using Microsoft.Extensions.Options;
+global using NCrontab;
+global using Serilog;
+global using System.Diagnostics.CodeAnalysis;
+global using VesteTemplateWorker.ApplicationServices;
+global using VesteTemplateWorker.Bases;
+global using VesteTemplateWorker.Domain;
+global using VesteTemplateWorker.Extensions.DependencyInjections;
+global using VesteTemplateWorker.Extensions.Healthchecks;
+global using VesteTemplateWorker.Extensions.Logs.Configurations;
+global using VesteTemplateWorker.Extensions.Notifications;
+global using VesteTemplateWorker.Extensions.Telemetry;
+global using VesteTemplateWorker.Infra.Data;
+global using VesteTemplateWorker.Shared.Configurations;
+global using VesteTemplateWorker.Shared.Logs.Services;
+global using VesteTemplateWorker.Worker;

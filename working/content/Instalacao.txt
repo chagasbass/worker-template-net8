@@ -1,0 +1,31 @@
+INSTALAÇÃO E CRIAÇÃO
+
+no diretorio principal do projeto usar o comando
+
+dotnet new install .\
+
+
+Para listar e verificar se o template foi instalado
+dotnet new -l
+
+entrar em uma pasta que vc queira criar o projeto e executar o comando
+
+dotnet new veste-worker -n MyProject
+
+após a instalação, deve-se rodar os seguintes comandos
+
+**Remover a pasta template.config
+
+Remove-Item -Path ".\template.config" -Recurse -Force
+
+Efetuar o restore do projeto
+
+dotnet restore
+
+DESINSTALAÇÃO
+
+No terminal, acesse a pasta do projeto e execute o seguinte comando para desinstalar o modelo localizado na pasta atual:
+
+dotnet new uninstall .\
+
+Esse comando gera uma lista dos modelos que foram desinstalados, o que deve incluir o seu.
