@@ -12,7 +12,6 @@ try
 
         var config = GetConfiguration(args, env);
 
-        //TODO:Inserir as outras extensions criadas
         services.AddOptionsPattern(config)
                 .AddApplicationInsightsTelemetry(config)
                 .AddWorkerHealthchecks(config)
@@ -20,9 +19,7 @@ try
                 .AddAvailabilityService()
                 .AddNotificationControl()
                 .AddDependencyInjectionExtensions()
-                .AddDomain()
-                .AddApplicationServices()
-                .AddInfrastructureData();
+                .AddWorkerDI();
 
         services.Configure<HostOptions>(config.GetSection("HostOptions"));
 
@@ -45,7 +42,7 @@ catch (Exception ex)
 }
 finally
 {
-    Log.CloseAndFlush();
+    await Log.CloseAndFlushAsync();
 }
 
 static IConfiguration GetConfiguration(string[] args, IHostEnvironment environment)

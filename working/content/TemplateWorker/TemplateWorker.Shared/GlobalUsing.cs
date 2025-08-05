@@ -2,7 +2,11 @@
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.Options;
 global using Serilog;
+global using System.Net;
+global using System.Net.Mail;
 global using System.Reflection;
 global using VesteTemplateWorker.Shared.Configurations;
+global using VesteTemplateWorker.Shared.Entities;
 global using VesteTemplateWorker.Shared.Helpers;
-global using VesteTemplateWorker.Shared.Logs;
+global using VesteTemplateWorker.Shared.LogsCustoms;
+global using VesteTemplateWorker.Shared.LogsCustoms.Services;

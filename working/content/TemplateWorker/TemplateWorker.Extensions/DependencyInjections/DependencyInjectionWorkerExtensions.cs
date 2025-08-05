@@ -1,4 +1,5 @@
-﻿namespace VesteTemplateWorker.Extensions.DependencyInjections;
+﻿
+namespace VesteTemplateWorker.Worker.Extensions;
 
 public static class DependencyInjectionWorkerExtensions
 {
